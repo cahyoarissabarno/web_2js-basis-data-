@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <input type="text" name="text" id="inputText"/>
+        <button onclick="pushData();">Show</button>
+        <button onclick="Asc();">Asc</button>
+        <button onclick="Desc();">Desc</button>
+        <p id="pText"></p>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        
+        <script>
+            
+            // create an array
+            var myArr = [];
+            
+            function pushData()
+            {
+                // get value from the input text
+                var inputText = document.getElementById('inputText').value;
+                
+                // append data to the array
+                myArr.push(inputText);
+                
+                var pval = "";
+                
+                for(i = 0; i < myArr.length; i++)
+                {
+                    pval = pval + myArr[i] + "<br/>";
+                }
+                
+                // display array data
+                document.getElementById('pText').innerHTML = pval;
+            }
+
+            function Asc() {
+              myArr.sort(function(a, b){return a-b});
+              document.getElementById("demo").innerHTML = myArr;
+            }
+
+            function Desc() {
+              myArr.sort(function(a, b){return b-a});
+              document.getElementById("demo2").innerHTML = myArr;
+            }
+            
+        </script>
+
+    </body>
+</html>

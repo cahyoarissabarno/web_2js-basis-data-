@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tugas basis data js</title>
+</head>
+<style>
+	body{
+		background-color: #243859;
+		color: #f0faef;
+	}
+
+	.judul{
+		width: 50%;
+		height: 640px;
+		float: left;
+	}
+
+	.judul h1{
+		font-size: 100px;
+		text-align: center;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	.tugas p{
+		font-size: 15px;
+		text-align: center;
+		margin-left: 30px;
+		margin-right: 30px;
+		margin-top: 15px;
+		color: grey;
+	}
+
+	.tugas{
+		width: 50%;
+		height: 640px;
+		float: right;
+		background-color: #f0faef;
+		color: black;
+	}
+
+	.tugas form {
+		margin-top: 100px;
+		margin-left: 200px;
+	}
+
+</style>
+<script>
+	function show(){
+		document.getElementById('login_page').style.display="inline";
+
+	}
+
+	function close_login(){
+		document.getElementById('login_page').style.display="none";
+	}
+
+</script>
+<body>
+	<div class="home">
+		<div class="judul"> 
+			<h1><b>TUGAS BASIS DATA WEB_2<b></h1>
+				<p align="center" style="font-size: 30px;">=== Hidden Login ===</p>
+				<a href="index.html"><button url="index.html" style="margin-left: 250px; width: 150px; height: 50px; border-radius:50px; background-color:#4a4646; color: white;" >Home</button></a>
+				<button style="margin-right: -400px; margin-top: -300px; width: 150px; height: 50px; border-radius:50px; background-color:#4a4646; color: white; float: right; " onclick="show();">LOGIN</button>
+		</div>
+		<div class="tugas" id="login_page" style="display: none; ">
+			<form id="form">
+				<label for="#password">Username : </label><br>
+					<input type="text" id="username" style="width: 300px; height: 15px; border-radius: 20px; border: 20px solid #4a4646; font-size: 15px; color: white; background-color: #4a4646; margin-bottom: 20px;" placeholder="Masukkan Username"><br>
+				<label for="#confpass">Password : </label><br>
+					<input type="password" id="password" style="width: 300px; height: 15px; border-radius: 20px; border: 20px solid #4a4646; font-size: 15px; color: white; background-color: #4a4646" placeholder="Masukkan Password">
+			</form>
+			<button style="margin-top: 100px; margin-left: 280px; width: 150px; height: 50px; border-radius:50px; background-color:#4a4646; color: white ; display: inline;">Submit</button><br>
+			<button style="margin-left: 280px; width: 150px; height: 50px; border-radius:50px; background-color:#4a4646; color: white ; display: inline;" onclick="close_login();">Close</button><br>
+			<br><br>
+			<p>----------------------------------------------------------------</p>
+			<p>Cahyo Arissabarno - 2210191030 - 1 D4 Teknik Komputer A</p>
+		</div>
+	</div>
+</body>
+</html>

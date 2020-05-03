@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tugas basis data js</title>
+</head>
+<style>
+	body{
+		background-color: #243859;
+		color: #f0faef;
+	}
+
+	.judul{
+		width: 50%;
+		height: 640px;
+		float: left;
+	}
+
+	.judul h1{
+		font-size: 100px;
+		text-align: center;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	.tugas p{
+		font-size: 15px;
+		text-align: center;
+		margin-left: 30px;
+		margin-right: 30px;
+		margin-top: 15px;
+		color: grey;
+	}
+
+	.tugas{
+		width: 50%;
+		height: 640px;
+		float: right;
+		background-color: #f0faef;
+		color: black;
+	}
+
+	.tugas button{
+		margin-left: 280px; 
+		width: 150px; 
+		height: 50px; 
+		border-radius:50px; 
+		background-color:#4a4646; 
+		color: white ;
+	}
+
+</style>
+<body>
+
+	<div class="home">
+		<div class="judul"> 
+			<h1><b>TUGAS BASIS DATA WEB_2<b></h1>
+				<p align="center" style="font-size: 30px;">=== Pengurutan ===</p>
+				<a href="index.html"><button url="index.html" style="margin-left: 250px; width: 150px; height: 50px; border-radius:50px; background-color:#4a4646; color: white;" >Home</button></a>
+		</div>
+		<div class="tugas" id="login_page">
+			<input type="number" id="input_angka" placeholder="Masukkan Angka" style="width: 130px; height: 15px; margin-top: 100px; margin-left: 270px; border-radius: 20px; border: 20px solid white; font-size: 15px; "><br><br><br>
+	        <button onclick="pushData();">Add</button>
+	        <button onclick="Asc();">Asc</button>
+	        <button onclick="Desc();">Desc</button>
+	        <p id="angka"></p>
+	        <p id="ascen"></p>
+	        <p id="descen"></p>
+			<br><br>
+			<p>----------------------------------------------------------------</p>
+			<p>Cahyo Arissabarno - 2210191030 - 1 D4 Teknik Komputer A</p>
+		</div>
+	</div>
+</body>
+<script>
+    var angka_arr = [];
+    
+    function pushData()
+    {
+        var input_angka = document.getElementById('input_angka').value;
+        angka_arr.push(input_angka);
+        var out_angka = "";
+        
+        for(i = 0; i < angka_arr.length; i++)
+        {
+            out_angka = out_angka + angka_arr[i] + ",";
+        }
+        document.getElementById('angka').innerHTML = out_angka;
+    }
+
+    function Asc() {
+      angka_arr.sort(function(a, b){return a-b});
+      document.getElementById("ascen").innerHTML = "Ascending : "+angka_arr;
+    }
+
+    function Desc() {
+      angka_arr.sort(function(a, b){return b-a});
+      document.getElementById("descen").innerHTML = "Descending : "+angka_arr;
+    }
+            
+</script>
+</html>

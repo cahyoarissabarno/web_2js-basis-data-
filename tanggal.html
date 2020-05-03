@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tugas basis data js</title>
+</head>
+<style>
+	body{
+		background-color: #243859;
+		color: #f0faef;
+	}
+
+	.judul{
+		width: 50%;
+		height: 640px;
+		float: left;
+	}
+
+	.judul h1{
+		font-size: 100px;
+		text-align: center;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	.tugas p{
+		font-size: 15px;
+		text-align: center;
+		margin-left: 30px;
+		margin-right: 30px;
+		margin-top: 15px;
+		color: grey;
+	}
+
+	.tugas{
+		width: 50%;
+		height: 640px;
+		float: right;
+		background-color: #f0faef;
+		color: black;
+	}
+
+	.tugas form {
+		margin-top: 180px;
+		margin-left: 230px;
+	}
+
+</style>
+<body>
+
+	<div class="home">
+		<div class="judul"> 
+			<h1><b>TUGAS BASIS DATA WEB_2<b></h1>
+				<p align="center" style="font-size: 30px;">=== Format Tanggal ===</p>
+				<a href="index.html"><button url="index.html" style="margin-left: 250px; width: 150px; height: 50px; border-radius:50px; background-color:#4a4646; color: white;" >Home</button></a>
+		</div>
+		<div class="tugas" id="login_page">
+			<form>
+			    Select Date : <br><br>
+			    <input type="date" id="input1" style="width: 130px; height: 15px; border-radius: 20px; border: 20px solid white; font-size: 15px; ">
+			</form><br>
+			<Button onclick="change_format();" style="margin-left: 240px; width: 150px; height: 50px; border-radius:50px; background-color:#4a4646; color: white ;" >Change Format</Button><br><br>
+			<div id="output" style="margin-left: 250px;"></div>
+			<br><br>
+			<p>----------------------------------------------------------------</p>
+			<p>Cahyo Arissabarno - 2210191030 - 1 D4 Teknik Komputer A</p>
+		</div>
+	</div>
+</body>
+<script>
+	var form = document.getElementById("form")
+	var dateInput = document.getElementById("input1")
+	var dataOutput = "";
+	var monthData = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+	function change_format(){
+	    var date = new Date(dateInput.value)
+	    dataOutput += "Format 1 : "+ date.getDate() + " / " + (date.getMonth() + 1) + " / " + date.getFullYear() + "<br>";
+	    dataOutput += "Format 2 : "+ date.getDate() + " " + monthData[date.getMonth()] + " " + date.getFullYear() + "<br>";
+	    document.getElementById("output").innerHTML = dataOutput
+	}
+</script>
+</html>
